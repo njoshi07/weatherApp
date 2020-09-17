@@ -17,7 +17,6 @@ window.addEventListener("load",()=> {
                 .then(response => {
                     return response.json();
                 }).then(data => {
-                    console.log(data);
                     const locationTimeZone = data.name;
                     const desc = data.weather[0].description;
                     const weatherIcon = data.weather[0].icon;
