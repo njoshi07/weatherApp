@@ -6,10 +6,10 @@ window.addEventListener("load",()=> {
     let icon = document.querySelector(".icon");
     let temperatureDescription = document.querySelector(".temperature-description");
 
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position => {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
+    // if(navigator.geolocation){
+    //     navigator.geolocation.getCurrentPosition(position => {
+    //         long = position.coords.longitude;
+    //         lat = position.coords.latitude;
          const proxy = 'https://cors-anywhere.herokuapp.com/';
          const api = `${proxy}https://api.openweathermap.org/data/2.5/weather?lat=41.257160&lon=-95.995102&units=imperial&lang=en&appid=23d42c6f1d8fba0e824c8e1e2e4590dd`;
 
@@ -27,7 +27,7 @@ window.addEventListener("load",()=> {
                 temperatureDescription.innerHTML = desc;
                 timeZone.innerHTML = locationTimeZone;
                 });
-        });
+       // });
 
-    }
+   // }
 });
